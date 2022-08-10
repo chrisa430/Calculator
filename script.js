@@ -46,6 +46,14 @@ function appendNumber(number) {
     currentOperation = null
   }
 
+  function appendPoint() {
+    if (ResetScreen) resetScreen()
+    if (currentOperationScreen.textContent === '')
+      currentOperationScreen.textContent = '0'
+    if (currentOperationScreen.textContent.includes('.')) return
+    currentOperationScreen.textContent += '.'
+  }
+
   
 
 function add(a, b) {
