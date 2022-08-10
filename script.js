@@ -27,6 +27,12 @@ operatorButtons.forEach((button) =>
   button.addEventListener('click', () => setOperation(button.textContent))
 )
 
+function appendNumber(number) {
+    if (currentOperationScreen.textContent === '0' || ResetScreen)
+      resetScreen()
+    currentOperationScreen.textContent += number
+  }
+
 
 function add(a, b) {
     return a + b
