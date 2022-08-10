@@ -60,6 +60,16 @@ function appendNumber(number) {
       .slice(0, -1)
   }
 
+  function setOperation(operator) {
+    if (currentOperation !== null) evaluate()
+    Operand1 = currentOperationScreen.textContent
+    currentOperation = operator
+    lastOperationScreen.textContent = `${Operand1} ${currentOperation}`
+    ResetScreen = true
+  }
+
+  
+
 function add(a, b) {
     return a + b
   }
