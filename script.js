@@ -82,6 +82,20 @@ function appendNumber(number) {
     currentOperation = null
   }
 
+  function roundResult(number) {
+    return Math.round(number * 1000) / 1000
+  }
+
+  function handleKeyboardInput(e) {
+    if (e.key >= 0 && e.key <= 9) appendNumber(e.key)
+    if (e.key === '.') appendPoint()
+    if (e.key === '=' || e.key === 'Enter') evaluate()
+    if (e.key === 'Backspace') deleteNumber()
+    if (e.key === 'Escape') clear()
+    if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/')
+      setOperation(convertOperator(e.key))
+  }
+
 function add(a, b) {
     return a + b
   }
