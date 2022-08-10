@@ -33,6 +33,11 @@ function appendNumber(number) {
     currentOperationScreen.textContent += number
   }
 
+  function resetScreen() {
+    currentOperationScreen.textContent = ''
+    ResetScreen = false
+  }
+
 
 function add(a, b) {
     return a + b
