@@ -38,6 +38,15 @@ function appendNumber(number) {
     ResetScreen = false
   }
 
+  function clear() {
+    currentOperationScreen.textContent = '0'
+    lastOperationScreen.textContent = ''
+    Operand1 = ''
+    Operand2 = ''
+    currentOperation = null
+  }
+
+  
 
 function add(a, b) {
     return a + b
