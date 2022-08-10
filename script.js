@@ -96,6 +96,13 @@ function appendNumber(number) {
       setOperation(convertOperator(e.key))
   }
 
+  function convertOperator(keyboardOperator) {
+    if (keyboardOperator === '/') return '÷'
+    if (keyboardOperator === '*') return '×'
+    if (keyboardOperator === '-') return '−'
+    if (keyboardOperator === '+') return '+'
+  }
+
 function add(a, b) {
     return a + b
   }
