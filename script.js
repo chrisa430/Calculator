@@ -19,6 +19,15 @@ deleteButton.addEventListener('click', deleteNumber)
 pointButton.addEventListener('click', appendPoint)
 
 
+numberButtons.forEach((button) =>
+  button.addEventListener('click', () => appendNumber(button.textContent))
+)
+
+operatorButtons.forEach((button) =>
+  button.addEventListener('click', () => setOperation(button.textContent))
+)
+
+
 function add(a, b) {
     return a + b
   }
