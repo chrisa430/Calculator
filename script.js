@@ -68,7 +68,19 @@ function appendNumber(number) {
     ResetScreen = true
   }
 
-  
+  function evaluate() {
+    if (currentOperation === null || ResetScreen) return
+    if (currentOperation === '÷' && currentOperationScreen.textContent === '0') {
+      alert("You can't divide by 0!")
+      return
+    }
+    Operand2 = currentOperationScreen.textContent
+    currentOperationScreen.textContent = roundResult(
+      operate(currentOperation, Operand1, Operand2)
+    )
+    lastOperationScreen.textContent = `${Operand1} ${currentOperation} ${Operand2} =`
+    currentOperation = null
+  }
 
 function add(a, b) {
     return a + b
