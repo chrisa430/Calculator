@@ -54,7 +54,11 @@ function appendNumber(number) {
     currentOperationScreen.textContent += '.'
   }
 
-  
+  function deleteNumber() {
+    currentOperationScreen.textContent = currentOperationScreen.textContent
+      .toString()
+      .slice(0, -1)
+  }
 
 function add(a, b) {
     return a + b
